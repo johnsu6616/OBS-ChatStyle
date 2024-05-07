@@ -3,20 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --font-color: #ffffff;
-    --background-owner: #f710ff;
-    --background-moderator: #5810ff;
-    --background-member: #10c7ff;
-    --background-general: #00d2ee;
+    --font-color: #ffffff; /* 字體顏色設定為白色 */
+    --background-owner: #f710ff; /* 擁有者背景顏色 */
+    --background-moderator: #5810ff; /* 管理員背景顏色 */
+    --background-member: #10c7ff; /* 會員背景顏色 */
+    --background-general: #00d2ee; /* 一般背景顏色 */
 }
 
-/* Background colors*/
+/* 背景顏色 */
 body {
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); /* 透明背景 */
 }
 
-/* Transparent background. */
+/* 透明背景 */
 yt-live-chat-renderer {
     background-color: transparent !important;
 }
@@ -28,12 +28,12 @@ yt-live-chat-renderer {
 #content #message{
     opacity: 1;
     line-height: 1.5;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; /* 字體設定 */
     font-weight: 100;
     font-style: normal;
 }
 
-/* CONTENT CHAT */
+/* 聊天內容 */
 #content,
 yt-live-chat-text-message-renderer {
     animation-name: animation;
@@ -43,7 +43,7 @@ yt-live-chat-text-message-renderer {
     flex-direction: column !important;
     background-color: transparent !important;
     font-size: 26px;
-    /* aqui mexe em tudo  */
+    /* 這裡修改所有 */
 }
 
 @keyframes animation {
@@ -56,10 +56,10 @@ yt-live-chat-text-message-renderer {
     }
 }
 
-/* Isi Pesan member biasa */
+/* 一般會員內容 */
 yt-live-chat-text-message-renderer #message {
     margin-top: -25px;
-    font-family: "lato";
+    font-family: "lato"; /* 字體設定 */
     letter-spacing: .5px;
     padding: 18px;
     background-color: #000000a8 !important;
@@ -72,9 +72,9 @@ yt-live-chat-text-message-renderer #message {
     min-height: 20px;
 }
 
-/* Isi Pesan Owner */
+/* 擁有者內容 */
 yt-live-chat-text-message-renderer[author-type="owner"] #messgae {
-    font-family: "arial";
+    font-family: "arial"; /* 字體設定 */
     letter-spacing: 2px;
     padding: 18px;
     background-color: #000000a8 !important;
@@ -84,7 +84,7 @@ yt-live-chat-text-message-renderer[author-type="owner"] #messgae {
     font-size: 26px !important;
     height: auto;
     min-height: 20px;
-    /* mensagem principal */
+    /* 主要訊息 */
 }
 
 
@@ -92,7 +92,7 @@ yt-live-chat-text-message-renderer[author-type="owner"] #message::before,
 yt-live-chat-text-message-renderer[author-type="moderator"] #message::before,
 yt-live-chat-text-message-renderer[author-type="member"] #message::before,
 yt-live-chat-text-message-renderer #message::before {
-    /* "pontinha da mensagem" */
+    /* 訊息尖端 */
     content: "";
     position: absolute;
     top: 55%;
@@ -107,9 +107,9 @@ yt-live-chat-text-message-renderer #message::before {
     opacity: 0;
 }
 
-/* Isi Pesan Moderator */
+/* 管理員內容 */
 yt-live-chat-text-message-renderer[author-type="moderator"] #message {
-    font-family: "arial";
+    font-family: "arial"; /* 字體設定 */
     letter-spacing: 2px;
     padding: 18px;
     color: var(--font-color) !important;
@@ -121,9 +121,9 @@ yt-live-chat-text-message-renderer[author-type="moderator"] #message {
     min-height: 20px;
 }
 
-/* Isi Pesan Membership */
+/* 會員內容 */
 yt-live-chat-text-message-renderer[author-type="member"] #message {
-    font-family: "arial";
+    font-family: "arial"; /* 字體設定 */
     letter-spacing: 2px;
     padding: 18px;
     border-radius: 20px 20px 20px 20px;
@@ -135,7 +135,7 @@ yt-live-chat-text-message-renderer[author-type="member"] #message {
     min-height: 20px;
 }
 
-
+/* 全部聊天背景 */
 yt-live-chat-text-message-renderer,
 yt-live-chat-text-message-renderer[is-highlighted] {
     background-color: transparent !important;
@@ -176,7 +176,7 @@ yt-live-chat-renderer * {
     font-size: 18px !important;
     line-height: normalpx !important;
     background-color: transparent !important;
-    /* renderiza todo o chat */
+    /* 渲染全部聊天 */
 }
 
 yt-live-chat-text-message-renderer #content,
@@ -209,7 +209,7 @@ yt-live-chat-paid-message-renderer #header {
     padding-right: 4px !important;
 }
 
-/* Avatars. */
+/* 頭像 */
 yt-live-chat-text-message-renderer #author-photo,
 yt-live-chat-paid-message-renderer #author-photo,
 yt-live-chat-legacy-paid-message-renderer #author-photo {
@@ -243,7 +243,7 @@ yt-live-chat-text-message-renderer #timestamp {
     line-height: 16px !important;
 }
 
-/* Nama channel owner */
+/* 頻道擁有者名稱 */
 yt-live-chat-text-message-renderer #author-name[type="owner"],
 yt-live-chat-text-message-renderer #author-name.owner,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
@@ -257,7 +257,7 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owne
     opacity: .95;
 }
 
-/* Nama channel moderator */
+/* 頻道管理員名稱 */
 yt-live-chat-text-message-renderer #author-name[type="moderator"],
 yt-live-chat-text-message-renderer #author-name.moderator {
     color: var(--font-color) !important;
@@ -270,12 +270,12 @@ yt-live-chat-text-message-renderer #author-name.moderator {
     opacity: .95;
 }
 
-/* Buat ngilangiin badge tang biru */
+/* 移除藍色徽章 */
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"] {
     display: none !important;
 }
 
-/* Nama channel membership */
+/* 頻道會員名稱 */
 yt-live-chat-text-message-renderer #author-name[type="member"],
 yt-live-chat-text-message-renderer #author-name.member,
 yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"] {
@@ -288,7 +288,7 @@ yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="memb
     opacity: .95;
 }
 
-/* Nama channel viewer biasa */
+/* 一般頻道觀眾名稱 */
 yt-live-chat-text-message-renderer #author-name {
     color: var(--font-color) !important;
     border: 2px solid #ffffff00 !important;
