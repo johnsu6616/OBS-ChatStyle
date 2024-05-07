@@ -1,0 +1,352 @@
+/* 匯入字型 */
+@import url("https://fonts.googleapis.com/css?family=Changa One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+
+:root {
+    --font-color: #ffffff;
+    --background-owner: #f710ff;
+    --background-moderator: #5810ff;
+    --background-member: #10c7ff;
+    --background-general: #00d2ee;
+}
+
+/* 背景顏色*/
+body {
+  overflow: hidden;
+  background-color: rgba(0,0,0,0);
+  margin: 0px auto; 
+  overflow: hidden;
+}
+
+/* 透明背景 */
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+
+#content {
+    margin-left: 0px; /* 內容左邊距 */
+}
+
+#content #message {
+
+    line-height: 0px; /* 行高 */
+    font-family: "Roboto", sans-serif; /* 字型 */
+    font-weight: 100; /* 字體粗細 */
+    font-style: normal; /* 字體樣式 */
+}
+
+/* 內容聊天 */
+#content,
+yt-live-chat-text-message-renderer {
+    animation-name: animation; /* 動畫名稱 */
+    animation-duration: 1s; /* 動畫持續時間 */
+    align-self: flex-start !important; /* 彈性對齊 */
+    display: flex !important; /* 彈性顯示 */
+    flex-direction: column !important; /* 彈性方向 */
+    background-color: transparent !important; /* 背景透明 */
+    font-size: 18px; /* 字體大小 */
+}
+/* 彈彈動畫 */
+@keyframes animation {
+    0% {
+        transform: scale(100%) translateX(0); /* 起始轉換 */
+    }
+    40% {
+        transform: scale(100%) translateX(50px); /* 中間轉換 */
+    }
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background-color: transparent !important;
+}
+
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+/* 輪廓 */
+
+yt-live-chat-renderer * {
+  background-color: transparent !important;
+  opacity: -2px -2px 0.05,-2px -1px 0.1,-2px 0px 0.15,-2px 1px 0.2,-2px 2px 0.25,-1px -2px 0.3,-1px -1px 0.35,-1px 0px 0.4,-1px 1px 0.45,-1px 2px 0.5,0px -2px 0.55,0px -1px 0.6,0px 0px 0.65,0px 1px 0.7,0px 2px 0.75,1px -2px 0.8,1px -1px 0.85,1px 0px 0.9,1px 1px 0.95,1px 2px 1,2px -2px 1,2px -1px 1,2px 0px 1,2px 1px 1,2px 2px 1;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 0px !important;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-legacy-paid-message-renderer #content {
+  	vertical-align: top !important;
+}
+
+/* 留言的排序 */
+yt-live-chat-item-list-renderer #items{
+  scroll-behavior: smooth;
+	/* 您希望顯示的總行數乘以每行的高度 */
+  /*max-height: 300px;*/
+
+	/* 將留言從上至下顯示 */
+  display: flex !important;
+  flex-direction: column-reverse !important; /* 將留言從下至上顯示 */
+  
+  align-items: flex-start !important; /* 對齊到容器的頂部 */
+  justify-content: flex-end !important; /* 從容器的底部開始排列 */
+  
+
+  
+  transform: rotateX(180deg);
+
+}
+
+
+yt-live-chat-item-list-renderer #items yt-live-chat-text-message-renderer {
+  /*transform: rotateX(180deg);*/
+  margin-bottom: 0px
+}
+
+/* 只顯示最新10則留言 */
+yt-live-chat-item-list-renderer #items yt-live-chat-text-message-renderer:nth-last-child(n+16) {
+  display: none !important;
+}
+
+/* 右側拉條 */
+yt-live-chat-item-list-renderer #item-scroller{
+  overflow: hidden !important;
+
+}
+
+/* 隱藏標題和輸入 */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* 減少側邊填充 */
+yt-live-chat-text-message-renderer,
+yt-live-chat-legacy-paid-message-renderer {
+    padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+yt-live-chat-paid-message-renderer #header {
+    padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+/* 頭像 */
+yt-live-chat-text-message-renderer #author-photo,
+yt-live-chat-paid-message-renderer #author-photo,
+yt-live-chat-legacy-paid-message-renderer #author-photo {
+  
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 24px !important;
+  margin-right: 0px !important;
+}
+
+/* 隱藏徽章 */
+yt-live-chat-text-message-renderer #author-badges {
+  display: none !important;
+  vertical-align: text-top !important;
+}
+
+
+
+/* 擁有者 */
+yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer #author-name.owner,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="owner"] {
+  color: #ffd600 !important;
+}
+
+/* 管理者 */
+yt-live-chat-text-message-renderer #author-name[type="moderator"],
+yt-live-chat-text-message-renderer #author-name.moderator,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="moderator"] {
+  color: #5e84f1 !important;
+}
+
+/*成員*/
+yt-live-chat-text-message-renderer #author-name[type="member"],
+yt-live-chat-text-message-renderer #author-name.member,
+yt-live-chat-text-message-renderer yt-live-chat-author-badge-renderer[type="member"] {
+  color: #0f9d58 !important;
+}
+
+
+
+/* 使用者名稱 */
+yt-live-chat-text-message-renderer #author-name {
+  color: #cccccc !important;
+
+  line-height: 18px !important;
+  overflow: hidden; /* 超出部分隱藏 */
+  white-space: nowrap; /* 不換行 */
+  text-overflow: ellipsis; /* 顯示省略號 */
+  max-width: 180px; /* 最大寬度，根據你的設計調整 */
+  margin: 0; /* 清除上下間距 */
+}
+
+yt-live-chat-text-message-renderer[author-type="owner"] #message::after,
+yt-live-chat-text-message-renderer[author-type="moderator"] #message::after,
+yt-live-chat-text-message-renderer[author-type="member"] #message::after,
+yt-live-chat-text-message-renderer #message::after {
+    /* 消息提示 */
+	  font-family: "Changa One";
+  font-size: 20px !important;
+    content: "";
+    position: absolute; /* 定位 */
+    top: 55%; /* 上偏移 */
+    left: 71px; /* 左偏移 */
+    width: 0; /* 寬度 */
+    transform: rotate(-45deg); /* 旋轉 */
+    height: 0; /* 高度 */
+    border-style: solid; /* 邊框樣式 */
+    border-width: 0 0 40px 40px; /* 邊框寬度 */
+    border-color: transparent transparent transparent #000000a8; /* 邊框顏色 */
+    z-index: 0; /* 層級 */
+    opacity: 0; /* 透明度 */
+}
+
+yt-live-chat-text-message-renderer #author-name::after {
+  content: ":";
+  margin-left: 0px;
+}
+
+
+
+/* 時間標記 */
+yt-live-chat-text-message-renderer #timestamp  {
+	display: inline !important;
+  color: #999999 !important;
+  font-family: "Imprima";
+  font-size: 16px !important;
+  line-height: 0px !important;
+  order: -1 !important;
+  margin: 0; /* 清除上下間距 */
+}
+
+
+
+
+
+
+/* 訊息 */
+yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #message * {
+  color: #cccccc !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 18px !important;
+  letter-spacing: normal !important;
+  display: block !important;/*留言需空行，不和名字黏在一起*/
+}
+
+/* 超級聊天/粉絲資助訊息 */
+yt-live-chat-paid-message-renderer #author-name,
+yt-live-chat-paid-message-renderer #author-name *,
+yt-live-chat-legacy-paid-message-renderer #event-text,
+yt-live-chat-legacy-paid-message-renderer #event-text * {
+  color: #ffffff !important;
+  font-family: "Changa One";
+  font-size: 20px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-paid-message-renderer #purchase-amount,
+yt-live-chat-paid-message-renderer #purchase-amount *,
+yt-live-chat-legacy-paid-message-renderer #detail-text,
+yt-live-chat-legacy-paid-message-renderer #detail-text * {
+  color: #ffffff !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-paid-message-renderer #content,
+yt-live-chat-paid-message-renderer #content * {
+  color: #ffffff !important;
+  font-family: "Imprima";
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-moderation-message-renderer {
+  display: none !important;
+}
+
+yt-live-chat-paid-message-renderer {
+  margin: 2px 0 !important;
+}
+
+yt-live-chat-legacy-paid-message-renderer {
+  background-color: #0f9d58 !important;
+  margin: 2px 0 !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-legacy-paid-message-renderer a {
+  text-decoration: none !important;
+}
+
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted] {
+  display: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+
+yt-live-chat-ticker-paid-message-item-renderer,
+yt-live-chat-ticker-paid-message-item-renderer *,
+yt-live-chat-ticker-sponsor-item-renderer,
+yt-live-chat-ticker-sponsor-item-renderer * {
+  color: #ffffff !important;
+  font-family: "Imprima";
+}
+
+yt-live-chat-mode-change-message-renderer, 
+yt-live-chat-viewer-engagement-message-renderer, 
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+yt-live-chat-banner-manager {
+  display: none !important;
+}
+
+
+yt-live-chat-action-panel-renderer, 
+yt-live-chat-renderer #action-panel {
+  display: none !important;
+}
+yt-reaction-control-panel-overlay,
+yt-reaction-control-panel-overlay-view-model,
+yt-reaction-control-panel-view-model {
+  display: none !important;
+}
+yt-live-chat-viewer-engagement-message-renderer {
+  display: none !important;
+}
