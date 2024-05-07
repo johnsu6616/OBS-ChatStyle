@@ -1,0 +1,29 @@
+/*
+https://chatv2.septapus.com/
+remove background */
+
+.style-scope yt-live-chat-renderer {
+    background-color: rgb(0, 0, 0, 0);
+}
+
+#items.yt-live-chat-item-list-renderer > *.yt-live-chat-item-list-renderer {
+    background-color: rgb(0, 0, 0, 0);
+}
+
+/* remove top bar scroll bar, chat box */
+.style-scope yt-live-chat-header-renderer {
+    display: none;
+}
+
+yt-live-chat-item-list-renderer[allow-scroll] #item-scroller.yt-live-chat-item-list-renderer {
+    overflow: hidden;
+}
+
+.style-scope yt-live-chat-message-input-renderer {
+    display: none;
+}
+
+/* hide profile picture */
+yt-img-shadow#author-photo.no-transition.style-scope.yt-live-chat-text-message-renderer {
+    display: none;
+}

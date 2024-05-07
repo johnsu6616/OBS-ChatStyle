@@ -1,0 +1,35 @@
+body {
+	background-color: rgba(0, 0, 0, 0);
+	margin: 0px auto;
+	overflow: hidden;
+} 
+
+yt-live-chat-renderer {
+	background-color: rgba(0, 0, 0, 0.6) !important;
+}
+ 
+#message.yt-live-chat-text-message-renderer {
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Calibri', Arial;
+}
+
+yt-live-chat-header-renderer.yt-live-chat-renderer {
+	display:none;
+}
+
+#panel-pages.yt-live-chat-renderer {
+	display:none;
+}
+
+yt-live-chat-text-message-renderer[is-highlighted] {
+    background-color: hsla(0, 0%, 6.7%, .6);
+}
+
+yt-live-chat-text-message-renderer {
+    font-size: 14px;
+}
+
+#contents.yt-live-chat-item-list-renderer {
+	right: -25px;
+}
