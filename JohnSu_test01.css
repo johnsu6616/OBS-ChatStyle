@@ -149,6 +149,13 @@ yt-live-chat-paid-message-renderer #header {
   padding-right: 2px !important;
 }
 
+/* 使用者資訊排列 */
+/*
+yt-live-chat-text-message-renderer #author-info {
+  display: flex;
+  align-items: center;
+}
+*/
 /* 頭像 */
 yt-live-chat-text-message-renderer #author-photo,
 yt-live-chat-paid-message-renderer #author-photo,
@@ -159,13 +166,6 @@ yt-live-chat-legacy-paid-message-renderer #author-photo {
   border-radius: 24px !important;
   margin-right: 0px !important;
 }
-
-/* 隱藏徽章 */
-yt-live-chat-text-message-renderer #author-badges {
-  display: none !important;
-  vertical-align: text-top !important;
-}
-
 
 
 /* 擁有者 */
@@ -287,8 +287,6 @@ yt-live-chat-paid-message-renderer #content * {
   line-height: 18px !important;
 }
 
-yt-live-chat-moderation-message-renderer {
-  display: none !important;
 }
 
 yt-live-chat-paid-message-renderer {
@@ -300,22 +298,10 @@ yt-live-chat-legacy-paid-message-renderer {
   margin: 2px 0 !important;
 }
 
-yt-live-chat-text-message-renderer a,
-yt-live-chat-legacy-paid-message-renderer a {
-  text-decoration: none !important;
-}
-
-yt-live-chat-text-message-renderer[is-deleted],
-yt-live-chat-legacy-paid-message-renderer[is-deleted] {
-  display: none !important;
-}
 
 yt-live-chat-ticker-renderer {
   background-color: transparent !important;
   box-shadow: none !important;
-}
-yt-live-chat-ticker-renderer {
-  display: none !important;
 }
 
 
@@ -350,3 +336,27 @@ yt-reaction-control-panel-view-model {
 yt-live-chat-viewer-engagement-message-renderer {
   display: none !important;
 }
+
+/* 隱藏徽章 */
+yt-live-chat-text-message-renderer #author-badges {
+  display: none !important;
+  /*vertical-align: text-top !important;*/
+}
+
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-legacy-paid-message-renderer a {
+  text-decoration: none !important;
+}
+
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-legacy-paid-message-renderer[is-deleted] {
+  display: none !important;
+}
+
+
+yt-live-chat-moderation-message-renderer {
+  display: none !important;
